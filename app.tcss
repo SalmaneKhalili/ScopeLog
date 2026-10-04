@@ -1,0 +1,78 @@
+#sources {
+    padding: 1;
+    width: 30%;
+    border: round $accent;
+}
+
+#logs {
+    padding: 1;
+    height: 1fr;
+    width: 1fr;
+    border: round $accent;
+}
+
+
+#footer {
+    height: 1;
+}
+
+Input, Select {
+    height: 3;
+    border: round $accent;
+    background: transparent;
+    color: $text;
+}
+
+DirectoryTree, Tree {
+    background: transparent;
+}
+
+DirectoryTree TreeLine, Tree TreeLine {
+    background: transparent;
+}
+
+DirectoryTree > .tree--cursor, Tree > .tree--cursor {
+    background: grey;
+}
+
+DirectoryTree:focus > .tree--cursor, Tree:focus > .tree--cursor {
+    background: grey;
+}
+
+#sources:focus, 
+#logs:focus, 
+#filter-grid:focus-within {
+    border: round white;
+}
+
+Input:focus, Select:focus {
+    background: transparent;
+    border: round white;
+    color: $text;
+}
+#filter-grid {
+  height: 12;
+  border: round $accent;
+}
+
+
+#search {
+  width: 40;
+  height: 3;
+  }
+
+#search_container {
+    height: 3;
+    align: left middle;
+}
+
+#search_label {
+    height: 3;
+    content-align: center middle;
+    padding-right: 0;
+    padding-left: 1;
+}
+
+
+
+
