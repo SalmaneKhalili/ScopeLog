@@ -55,24 +55,39 @@ Input:focus, Select:focus {
   border: round $accent;
 }
 
-
 #search {
-  width: 40;
-  height: 3;
-  }
-
-#search_container {
-    height: 3;
-    align: left middle;
+  width: 40%;
 }
 
-#search_label {
-    height: 3;
-    content-align: center middle;
-    padding-right: 0;
-    padding-left: 1;
+#highlight-box, #highlight-box:focus{
+  width: 9;
+  background: transparent;
+  border: transparent;
 }
+#follow-box, #follow-box:focus{
+width: 9;
+  background: transparent;
+  border: transparent;
+}
+#regex-box, #regex-box:focus{
+width: 9;
+  background: transparent;
+  border: transparent;
+}
+#case-insensitive-box, #case-insensitive-box:focus{
+width: 9;
+  background: transparent;
+  border: transparent;
 
-
-
-
+}
+#boxes {
+width: 50%;
+    layout: grid;
+    grid-size: 4;
+    grid-columns: 1fr 1fr;
+    height: auto;
+}
+TabPane RichLog {
+  background: transparent;
+  border: round $accent;
+}
