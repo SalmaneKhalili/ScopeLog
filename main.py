@@ -155,6 +155,7 @@ class ScopeLogApp(App):
             cmd.append("-E")
         else:
             cmd.append("-F")
+        cmd.append("-e")
 
         cmd.extend([pattern, str(self.FILE_PATH)])
 
@@ -235,7 +236,7 @@ class ScopeLogApp(App):
 
         if self.high_l:
             grep_cmd.append("--color=always")
-
+        grep_cmd.append("-e")
         grep_cmd.append(pattern)
 
         self.grep_proc = subprocess.Popen(
