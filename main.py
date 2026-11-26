@@ -10,19 +10,9 @@ from textual.binding import Keymap
 from textual.color import Lab
 from textual.containers import Container, Horizontal, Vertical
 from textual.widget import Widget
-from textual.widgets import (
-    Checkbox,
-    DirectoryTree,
-    Footer,
-    Input,
-    Label,
-    Log,
-    RichLog,
-    Select,
-    Static,
-    TabbedContent,
-    TabPane,
-)
+from textual.widgets import (Checkbox, DirectoryTree, Footer, Input, Label,
+                             Log, RichLog, Select, Static, TabbedContent,
+                             TabPane)
 from textual.worker import get_current_worker
 
 
@@ -163,6 +153,8 @@ class ScopeLogApp(App):
 
         if self.reg_f:
             cmd.append("-E")
+        else:
+            cmd.append("-F")
 
         cmd.extend([pattern, str(self.FILE_PATH)])
 
@@ -238,6 +230,8 @@ class ScopeLogApp(App):
 
         if self.reg_f:
             grep_cmd.append("-E")
+        else:
+            grep_cmd.append("-F")
 
         if self.high_l:
             grep_cmd.append("--color=always")
